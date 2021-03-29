@@ -83,7 +83,8 @@ void main(final List<String> arguments) async {
   final decimalFormatter = NumberFormat.decimalPattern();
 
   print('Total issues since $formattedStartDate: $issueCount');
-  print('Average issues created per week: ${decimalFormatter.format(issueCount / weeks)}');
+  print(
+      'Average issues created per week: ${decimalFormatter.format(issueCount / weeks)}');
 
   // Calculate the total amount of pull requests.
   final pullRequestCount = weeklyPullRequests.values
@@ -93,7 +94,8 @@ void main(final List<String> arguments) async {
   print('');
 
   print('Total pull requests since $formattedStartDate: $pullRequestCount');
-  print('Average pull requests opened per week: ${decimalFormatter.format(pullRequestCount / weeks)}');
+  print(
+      'Average pull requests opened per week: ${decimalFormatter.format(pullRequestCount / weeks)}');
 
   exit(0);
 }
